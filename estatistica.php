@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
     <title>Estatistica</title>
     <!-- Required meta tags -->
@@ -13,6 +12,7 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/Media-Variancia-Desvio_Padrao/assets/icon/favicon.ico">
 </head>
 <style>
     button {
@@ -29,18 +29,23 @@
 </style>
 
 <body>
-    <form class="row g-3 card md-6">
+    <form class="row g-3 card md-4">
         <div class="card-header">
             <label for="numero">Numero</label>
         </div>
         <div class="card-body">
-            <div class="col-auto mb-4">
-                <input type="text" class="form-control" id="numero" value="">
+            <div class="col-auto mb-4 col-md-6 form-inline">
+                <input type="text" class="form-control" id="numero" value="" onkeyup="/\D/g.test(this.value) ? this.value = '' : this.value ">
+                <div class="form-check mt-2 mb-1">
+                    <input class="form-check-input" type="radio" value="" id="amostra" onclick="javascript:this.value = 1">
+                    <label class="form-check-label" for="amostra">
+                        Amostral
+                    </label>
+                </div>
             </div>
             <div class="col-auto">
                 <button type="button" class="btn btn-secondary" onclick="add()">ADD <i class="bi bi-plus"></i></button>
-                <button type="button" class="btn btn-danger" onclick="limpar()">LIMPAR <i
-                        class="bi bi-trash-fill"></i></button>
+                <button type="button" class="btn btn-danger" onclick="limpar()">LIMPAR <i class="bi bi-trash-fill"></i></button>
             </div>
         </div>
     </form>
@@ -62,8 +67,7 @@
             Calcular
         </div>
         <div class="card-body">
-            <button type="button" class="btn btn-info" onclick="calcular()">Calcular <i
-                    class="bi bi-calculator"></i></button>
+            <button type="button" class="btn btn-info" onclick="calcular()">Calcular <i class="bi bi-calculator"></i></button>
         </div>
     </div>
     <div class="progress mb-4">
@@ -85,5 +89,6 @@
     </script>
 </body>
 <script src="estatistica.js?v=<?=rand(0, 100000)?>"></script>
+<script src="estatistica.min.js?v=<?=rand(0, 100000)?>"></script>
 
 </html>
