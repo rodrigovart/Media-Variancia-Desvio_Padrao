@@ -88,7 +88,7 @@
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
     </script>
 </body>
-<script src="estatistica.js?v=<?=rand(0, 100000)?>"></script>
+<!-- <script src="estatistica.js?v=<?=rand(0, 100000)?>"></script> -->
 <script src="estatistica.min.js?v=<?=rand(0, 100000)?>"></script>
 
 </html>

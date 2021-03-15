@@ -35,7 +35,7 @@ function add() {
 
 function calcular() {
     let amostra = $("#amostra").val()
-    limpar()
+    // limpar()
     progress()
 
     let valorMedia = mediaAritimetica()
@@ -64,7 +64,7 @@ function notaMedia(valorNotaMedia) {
         $(`#trDados${key}`).append(`<td id="nota-media${key}">${valor.toFixed(2)}</td>`)
         Quadrado(key, valor)
     }
-    console.log(quadrado)
+    // console.log(quadrado)
 }
 
 function Quadrado(n, valor) {
