@@ -80,10 +80,10 @@ function variancia(amostra = 0) {
         soma += parseFloat(quadrado[key])
     }
 
+    console.log(soma)
+    console.log(countTr())
+    console.log(amostra)
     let valorMediaQuadrado = parseFloat((soma / (countTr() - amostra))).toFixed(2)
-    // console.log(soma)
-    // console.log(countTr())
-    // console.log(amostra)
 
     return [valorMediaQuadrado, soma]
 }
@@ -129,12 +129,14 @@ function progress() {
 }
 
 function limpar() {
-    $("#tbody").empty()
-    $("#progress-bar").css({
-        "width": `${0}%`
-    })
-    $("#alert").empty().append(`LIMPO`)
+    // $("#tbody").empty()
+    // $("#progress-bar").css({
+    //     "width": `${0}%`
+    // })
+    // $("#alert").empty().append(`LIMPO`)
 
-    delete media
-    delete quadrado
+    // delete media
+    // delete quadrado
+
+    location.reload()
 }
